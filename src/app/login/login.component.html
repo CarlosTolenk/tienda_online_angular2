@@ -1,0 +1,27 @@
+<section>
+  <div class="login">
+    <div class="row">
+      <form [formGroup]="login" (ngSubmit)="sendForm()">
+      <div class="col s7 ">
+      <h4 class="login-text">Inicio de Sesión</h4>
+      </div>
+      <div class="col s7 login-item">
+      <i class="material-icons">account_circle</i> <label for="email-input">Correo electrónico</label>
+      </div>
+      <div class="col s7 login-item">
+        <input type="text" id="email-input" formControlName="user-name">
+      </div>
+      <div class="col s7 login-item">
+        <i class="material-icons">enhanced_encryption</i><label for="password-input">Contraseña</label>
+      </div>
+      <div class="col s7 login-item">
+        <input type="password"  id="password-input" formControlName="user-password">
+      </div>
+      <div class="col s7 login-item">
+        <button class="btn waves-effect red darken-4" [disabled]="!login.valid">Enviar
+        </button>
+      </div>
+    </form>
+    </div>
+  </div>
+</section>
